@@ -16,6 +16,10 @@ app.set('views', path.join(__dirname, 'resource/views'));
 app.get('/', (req, res) => {
   res.render('home');
 });
+app.get('/view', (req, res) => {
+  console.log(req.query);
+  res.render('view');
+});
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
